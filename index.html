@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Het Kleine Atelier - Exclusieve Kleermakerij</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C3E50',
+                        secondary: '#BDC3C7',
+                        accent: '#D4AF37'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="text-2xl font-serif font-bold text-primary">Het Kleine Atelier</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-accent transition-colors">Home</a>
+                    <a href="#over-ons" class="hover:text-accent transition-colors">Over Ons</a>
+                    <a href="#diensten" class="hover:text-accent transition-colors">Diensten</a>
+                    <a href="#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
+                    <a href="#reviews" class="hover:text-accent transition-colors">Reviews</a>
+                    <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#home" class="text-xl hover:text-accent transition-colors">Home</a>
+            <a href="#over-ons" class="text-xl hover:text-accent transition-colors">Over Ons</a>
+            <a href="#diensten" class="text-xl hover:text-accent transition-colors">Diensten</a>
+            <a href="#portfolio" class="text-xl hover:text-accent transition-colors">Portfolio</a>
+            <a href="#reviews" class="text-xl hover:text-accent transition-colors">Reviews</a>
+            <a href="#contact" class="text-xl hover:text-accent transition-colors">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1584184924103-e310d9dc82fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6">Vakmanschap op Maat</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Exclusieve kleermakerij voor het perfecte maatwerk en professionele kledingreparatie</p>
+            <a href="#contact" class="inline-block bg-accent hover:bg-accent/90 text-white px-8 py-3 rounded transition-colors">Maak een Afspraak</a>
+        </div>
+    </section>
+
+<!-- Over Ons Section -->
+<section id="over-ons" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <!-- Main Heading -->
+        
+        <!-- Split Layout (Image on left, Content on right) -->
+        <div class="grid md:grid-cols-2 mt-12 gap-12 items-center">
+            <!-- Image Section (on the left) -->
+            <div class="relative">
+                <img src="https://heysocal.com/wp-content/uploads/2025/02/kris-atomic-ZgMMjAR9b20-unsplash-scaled.jpg" alt="Kleermaker aan het werk" class="rounded-lg shadow-xl w-full h-auto">
+            </div>
+            
+            <!-- Content Section (on the right) -->
+            <div class="space-y-6">
+                <h2 class="text-3xl md:text-4xl font-serif text-gray-800">Wie Zijn Wij?</h2>
+                <p class="text-lg text-gray-600">Met meer dan 20 jaar ervaring in haute couture en kledingreparatie, bieden wij het hoogste niveau van vakmanschap voor al uw kledingwensen.</p>
+                <p class="text-lg text-gray-600">Ons team van ervaren kleermakers combineert traditionele technieken met moderne stijlen om u de perfecte pasvorm te garanderen.</p>
+                
+                <!-- Feature Blocks Section -->
+                <div class="mt-8 grid md:grid-cols-2 gap-12 text-center">
+                    <!-- Feature Block 1 -->
+                    <div class="space-y-2">
+                        <div class="w-16 h-16 text-blue-600 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-tape fa-2x"></i> <!-- Icon for tailoring -->
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Expertise</h3>
+                        <p class="text-lg text-gray-600">Meer dan 20 jaar ervaring in de mode-industrie, gespecialiseerd in op maat gemaakte kleding en reparaties.</p>
+                    </div>
+                    
+                    <!-- Feature Block 2 -->
+                    <div class="space-y-2">
+                        <div class="w-16 h-16 text-blue-600 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-scissors fa-2x"></i> <!-- Icon for craftsmanship -->
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Vakmanschap</h3>
+                        <p class="text-lg text-gray-600">Onze kleermakers gebruiken zowel traditionele als moderne technieken om de perfecte pasvorm te leveren.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Diensten Section -->
+    <section id="diensten" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif text-center mb-16">Onze Diensten</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1591944489410-16ec1074a18e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3VzdG9tJTIwbWFkZSUyMGNsb3RoaW5nfGVufDB8fDB8fHww" alt="Maatwerk" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-4">Maatwerk</h3>
+                        <p>Exclusieve kleding op maat gemaakt volgens uw wensen en exacte maten.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="https://plus.unsplash.com/premium_photo-1677695581685-57640460aea6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVwYWlyaW5nJTIwY2xvdGhlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Kledingreparatie" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-4">Kledingreparatie</h3>
+                        <p>Professionele reparatie en aanpassing van uw favoriete kledingstukken.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="https://plus.unsplash.com/premium_photo-1664195857711-e797748a3f22?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVuZGluZyUyMGNsb3RoZXN8ZW58MHx8MHx8fDA%3D" alt="Vermaken" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-4">Vermaken</h3>
+                        <p>Perfecte pasvorm door het vakkundig aanpassen van uw kleding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif text-center mb-16">Portfolio</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <!-- Example post 1 -->
+                <a href="https://www.instagram.com/properbeautysalon" target="_blank" class="group relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1673535093425-a08e4e9efb36?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Instagram 1" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </a>
+                <!-- Example post 2 -->
+                <a href="https://www.instagram.com/properbeautysalon" target="_blank" class="group relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1674718916590-4a560d46d655?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2FsYSUyMGRyZXNzJTIwcmVwYWlyfGVufDB8fDB8fHww" alt="Instagram 2" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </a>
+                <!-- Example post 3 -->
+                <a href="https://www.instagram.com/properbeautysalon" target="_blank" class="group relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1664530452424-2bc239d787d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHdlZGRpbmclMjBkcmVzcyUyMHJlcGFpcnxlbnwwfHwwfHx8MA%3D%3D" alt="Instagram 3" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </a>
+                <!-- Example post 4 -->
+                <a href="https://www.instagram.com/properbeautysalon" target="_blank" class="group relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1661430693470-c30a4016bdbc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2VkZGluZyUyMGRyZXNzJTIwcmVwYWlyfGVufDB8fDB8fHww" alt="Instagram 4" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </a>
+                <!-- Example post 5 -->
+                <a href="https://www.instagram.com/properbeautysalon" target="_blank" class="group relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1661768612925-53da155c6d44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2VkZGluZyUyMGRyZXNzJTIwcmVwYWlyfGVufDB8fDB8fHww" alt="Instagram 5" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </a>
+                <!-- Example post 6 -->
+                <a href="https://www.instagram.com/properbeautysalon" target="_blank" class="group relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1673766085289-dc93a722afc5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2xvdGhpbmclMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D" alt="Instagram 6" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </a>
+                <!-- Example post 7 -->
+                <a href="https://www.instagram.com/properbeautysalon" target="_blank" class="group relative">
+                    <img src="https://images.unsplash.com/photo-1696546760878-de1c222740c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdGhpbmclMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D" alt="Instagram 7" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </a>
+                <!-- Example post 8 -->
+                <a href="https://www.instagram.com/properbeautysalon" target="_blank" class="group relative">
+                    <img src="https://images.unsplash.com/photo-1696546761318-6600e44882f9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvdGhpbmclMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D" alt="Instagram 8" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </a>
+                <!-- Example post 9 -->
+                <a href="https://www.instagram.com/properbeautysalon" target="_blank" class="group relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1664299848948-54d352989d94?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdGhpbmclMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D" alt="Instagram 9" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center mt-8">
+                <a href="https://www.instagram.com/properbeautysalon" target="_blank" class="inline-flex items-center space-x-2 bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded transition-colors">
+                    <i class="fab fa-instagram"></i>
+                    <span>Bekijk meer op Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Samenwerkingen Section -->
+    <section id="samenwerkingen" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif text-center mb-16">Samenwerkingen</h2>
+            <div class="relative overflow-hidden">
+                <div id="partnersCarousel" class="flex gap-12 space-x-12 px-4 whitespace-nowrap will-change-transform">
+                    <!-- Partner Logos -->
+                    <div class="partner w-24 flex-none">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" 
+                             alt="Adidas" class="w-full h-24 object-contain">
+                    </div>
+                    <div class="partner w-24 flex-none">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Chanel_logo_interlocking_cs.svg/153px-Chanel_logo_interlocking_cs.svg.png?20081206151515" 
+                             alt="Chanel" class="w-full h-24 object-contain">
+                    </div>
+                    <div class="partner w-24 flex-none">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg" 
+                             alt="H&M" class="w-full h-24 object-contain">
+                    </div>
+                    <div class="partner w-24 flex-none">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/800px-Zara_Logo.svg.png" 
+                             alt="Zara" class="w-full h-24 object-contain">
+                    </div>
+                    <div class="partner w-24 flex-none">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Gucci_logo.svg/512px-Gucci_logo.svg.png?20180702130155" 
+                             alt="Gucci" class="w-full h-24 object-contain">
+                    </div>
+                    <div class="partner w-24 flex-none">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Herm%C3%A8s.svg/220px-Herm%C3%A8s.svg.png" 
+                             alt="Hermès" class="w-full h-24 object-contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif text-center mb-16">Wat Klanten Zeggen</h2>
+            
+            <!-- Slick carousel container -->
+            <div class="reviews-carousel max-w-screen-lg mx-auto">
+                <!-- Review items -->
+                <div class="review-item">
+                    <div class="bg-white p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Anna B.</h4>
+                                <div class="text-accent">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Uitstekende service! Mijn trouwjurk werd perfect op maat gemaakt. Zeer tevreden met het resultaat."</p>
+                        <a class="text-sm text-gray-400 mt-2" href="" target="_blank">Bekijk review</a>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <div class="bg-white p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Peter K.</h4>
+                                <div class="text-accent">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Vakkundig en snel mijn pak vermaakt. Zeer professionele service en prettige communicatie."</p>
+                        <a class="text-sm text-gray-400 mt-2" href="" target="_blank">Bekijk review</a>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <div class="bg-white p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Sophie M.</h4>
+                                <div class="text-accent">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Fantastische service en oog voor detail. Mijn kleding past nu perfect!"</p>
+                        <a class="text-sm text-gray-400 mt-2" href="" target="_blank">Bekijk review</a>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <div class="bg-white p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold">Jan W.</h4>
+                                <div class="text-accent">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Zeer tevreden met de reparatie van mijn favoriete jas. Snelle service en uitstekend resultaat."</p>
+                        <a class="text-sm text-gray-400 mt-2" href="" target="_blank">Bekijk review</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="text-center mt-8">
+                <a href="https://search.google.com/local/reviews?placeid=ChIJ7WcOo3PixUcRHIILrqJip7c" target="_blank" class="inline-block bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded transition-colors">
+                    <i class="fab fa-google"></i>
+                    <span>Bekijk reviews op Google</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-serif text-center mb-16">Contact</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <div class="space-y-6">
+                    <div class="bg-gray-100 p-6 py-8 space-y-4 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Neem contact met ons op via WhatsApp</h3>
+                        <p>Wij ontvangen contact, vragen en/of aanvragen bij voorkeur via Whatsapp. Druk op het Whatsapp-logo, en u wordt automatisch verbonden met ons Whatsapp nummer.</p>
+                        <p>Klik op de onderstaande knop om direct met ons via WhatsApp te chatten.</p>
+                        <div>
+                            <a href="https://web.whatsapp.com/send?phone=1234567890&text=Hallo,%20kan%20ik%20een%20vraag%20stellen?" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 mt-4 rounded-lg text-lg font-semibold transition-colors">
+                                <i class="fab fa-whatsapp me-1"></i>
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Openingstijden</h3>
+                    <ul class="space-y-1">
+                        <li class="flex justify-between">
+                            <span>Maandag - Vrijdag</span>
+                            <span>09:00 - 18:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Zaterdag</span>
+                            <span>10:00 - 17:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Zondag</span>
+                            <span>Gesloten</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Adresgegevens</h3>
+                    <ul class="space-y-1">
+                        <li class="flex justify-between">
+                            <span>Het Kleine Atelier</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Hoofdstraat 123</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>1234 AB Amsterdam</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Contact Information -->
+            <div class="space-y-3">
+                <h3 class="font-semibold mb-3">CONTACT</h3>
+                <div class="flex items-start space-x-2">
+                    <strong>Telefoon</strong>
+                </div>
+                <div class="flex items-start space-x-2">
+                    <div>
+                        <p>06 12345678</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-2">
+                    <strong>Bezoekadres</strong>
+                </div>
+                <div class="flex items-start space-x-2">
+                    <div>
+                        <p>Het Kleine Atelier</p>
+                        <p>Hoofdstraat 123</p>
+                        <p>1234 AB Amsterdam</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Maps Location -->
+            <div>
+                <h3 class="font-semibold mb-3">LOCATIE GOOGLE</h3>
+                <div class="h-64 w-full">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2430.675931428453!2d4.953341676924871!3d52.46689624015946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6065974d0414d%3A0x838889075e4c2228!2sTormentil%203%2C%201452%20VR%20Ilpendam!5e0!3m2!1snl!2snl!4v1742212242991!5m2!1snl!2snl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Company Information -->
+            <div class="space-y-4">
+                <h3 class="font-semibold mb-3">BEDRIJFSINFO</h3>
+                <div class="space-y-2">
+                    <div class="flex items-start space-x-2">
+                        <div>
+                            <p>KvK-nummer: 12345678</p>
+                            <p>BTW-nummer: NL123456789B01</p>
+                        </div>
+                    </div>
+                    <div class="pt-4 space-y-2">
+                        <a href="/privacy-policy" class="flex items-center space-x-3 underline hover:text-accent transition-colors">
+                            <span>Privacy statement</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="flex flex-col justify-center">
+          <!-- Social Media Links -->
+          <div class="flex justify-center space-x-6 mt-12 pt-8 border-t border-gray-800">
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                  <i class="fab fa-facebook-f text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                  <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                  <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                  <i class="fab fa-pinterest text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                  <i class="fab fa-tiktok text-xl"></i>
+              </a>
+          </div>
+
+          <!-- Copyright -->
+          <div class="mt-8 text-center text-sm text-gray-400">
+              <p>&copy; <script>document.write(new Date().getFullYear())</script> Het Kleine Atelier. Alle rechten voorbehouden.</p>
+          </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
