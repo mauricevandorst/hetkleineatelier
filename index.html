@@ -20,6 +20,12 @@
                         primary: '#2C3E50',
                         secondary: '#BDC3C7',
                         accent: '#D4AF37'
+                    },
+                    screens: {
+                        'sm': '640px',
+                        'md': '768px',
+                        'lg': '1024px',
+                        'xl': '1280px',
                     }
                 }
             }
@@ -74,39 +80,27 @@
     <!-- Over mij Section -->
     <section id="over-mij" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <!-- Main Heading -->
-            
-            <!-- Split Layout (Image on left, Content on right) -->
-            <div class="grid md:grid-cols-2 mt-12 gap-12 items-center">
-                <!-- Image Section (on the left) -->
-                <div class="relative">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 mt-12 gap-12 items-center">
+                <div class="col-span-1 sm:col-span-1 md:col-span-6">
                     <img src="https://heysocal.com/wp-content/uploads/2025/02/kris-atomic-ZgMMjAR9b20-unsplash-scaled.jpg" alt="Kleermaker aan het werk" class="rounded-lg shadow-xl w-full h-auto">
                 </div>
-                
-                <!-- Content Section (on the right) -->
-                <div class="space-y-6">
+                <div class="col-span-1 sm:col-span-1 md:col-span-6 space-y-6">
                     <h2 class="text-3xl md:text-4xl font-serif text-gray-800">Wie Ben Ik?</h2>
                     <p class="text-lg text-gray-600">Met meer dan 20 jaar ervaring in haute couture en kledingreparatie, bied ik het hoogste niveau van vakmanschap voor al uw kledingwensen.</p>
-                    <p class="text-lg text-gray-600">Met mijn ervaring als kleermaker combineer ik traditionele technieken met moderne stijlen om u de perfecte pasvorm te garanderen.</p>
-                    
-                    <!-- Feature Blocks Section -->
-                    <div class="mt-8 grid md:grid-cols-2 gap-12 text-center">
-                        <!-- Feature Block 1 -->
+                    <div class="mt-8 grid grid-cols-2 md:grid-cols-2 gap-12 text-center">
                         <div class="space-y-2">
                             <div class="w-16 h-16 text-blue-600 rounded-full flex items-center justify-center mx-auto">
-                                <i class="fas fa-tape fa-2x"></i> <!-- Icon for tailoring -->
+                                <i class="fas fa-tape fa-2x"></i>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-800">Expertise</h3>
-                            <p class="text-lg text-gray-600">Meer dan 20 jaar ervaring in de mode-industrie, gespecialiseerd in op maat gemaakte kleding en reparaties.</p>
+                            <p class="text-lg text-gray-600">Meer dan 20 jaar ervaring in de mode-industrie.</p>
                         </div>
-                        
-                        <!-- Feature Block 2 -->
                         <div class="space-y-2">
                             <div class="w-16 h-16 text-blue-600 rounded-full flex items-center justify-center mx-auto">
-                                <i class="fas fa-scissors fa-2x"></i> <!-- Icon for craftsmanship -->
+                                <i class="fas fa-scissors fa-2x"></i>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-800">Vakmanschap</h3>
-                            <p class="text-lg text-gray-600">Als kleermaker gebruik ik zowel traditionele als moderne technieken om de perfecte pasvorm te leveren.</p>
+                            <p class="text-lg text-gray-600">Via traditionele, én moderne technieken.</p>
                         </div>
                     </div>
                 </div>
@@ -148,65 +142,65 @@
     <section id="portfolio" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-serif text-center mb-16">Portfolio</h2>
-            <div class="grid grid-cols-3 gap-4">
-                <!-- Example post 1 -->
+            <div class="grid sm:grid-cols-3 grid-cols-2 gap-4 justify-center">
+                <!-- Post 1 -->
                 <a href="https://www.instagram.com/" target="_blank" class="group relative">
                     <img src="https://plus.unsplash.com/premium_photo-1673535093425-a08e4e9efb36?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Instagram 1" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
                         <i class="fab fa-instagram text-white text-3xl"></i>
                     </div>
                 </a>
-                <!-- Example post 2 -->
+                <!-- Post 2 -->
                 <a href="https://www.instagram.com/" target="_blank" class="group relative">
                     <img src="https://plus.unsplash.com/premium_photo-1674718916590-4a560d46d655?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2FsYSUyMGRyZXNzJTIwcmVwYWlyfGVufDB8fDB8fHww" alt="Instagram 2" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
                         <i class="fab fa-instagram text-white text-3xl"></i>
                     </div>
                 </a>
-                <!-- Example post 3 -->
+                <!-- Post 3 -->
                 <a href="https://www.instagram.com/" target="_blank" class="group relative">
                     <img src="https://plus.unsplash.com/premium_photo-1664530452424-2bc239d787d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHdlZGRpbmclMjBkcmVzcyUyMHJlcGFpcnxlbnwwfHwwfHx8MA%3D%3D" alt="Instagram 3" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
                         <i class="fab fa-instagram text-white text-3xl"></i>
                     </div>
                 </a>
-                <!-- Example post 4 -->
+                <!-- Post 4 -->
                 <a href="https://www.instagram.com/" target="_blank" class="group relative">
                     <img src="https://plus.unsplash.com/premium_photo-1661430693470-c30a4016bdbc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2VkZGluZyUyMGRyZXNzJTIwcmVwYWlyfGVufDB8fDB8fHww" alt="Instagram 4" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
                         <i class="fab fa-instagram text-white text-3xl"></i>
                     </div>
                 </a>
-                <!-- Example post 5 -->
+                <!-- Post 5 -->
                 <a href="https://www.instagram.com/" target="_blank" class="group relative">
                     <img src="https://plus.unsplash.com/premium_photo-1661768612925-53da155c6d44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2VkZGluZyUyMGRyZXNzJTIwcmVwYWlyfGVufDB8fDB8fHww" alt="Instagram 5" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
                         <i class="fab fa-instagram text-white text-3xl"></i>
                     </div>
                 </a>
-                <!-- Example post 6 -->
+                <!-- Post 6 -->
                 <a href="https://www.instagram.com/" target="_blank" class="group relative">
                     <img src="https://plus.unsplash.com/premium_photo-1673766085289-dc93a722afc5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2xvdGhpbmclMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D" alt="Instagram 6" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
                         <i class="fab fa-instagram text-white text-3xl"></i>
                     </div>
                 </a>
-                <!-- Example post 7 -->
+                <!-- Post 7 -->
                 <a href="https://www.instagram.com/" target="_blank" class="group relative">
                     <img src="https://images.unsplash.com/photo-1696546760878-de1c222740c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdGhpbmclMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D" alt="Instagram 7" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
                         <i class="fab fa-instagram text-white text-3xl"></i>
                     </div>
                 </a>
-                <!-- Example post 8 -->
+                <!-- Post 8 -->
                 <a href="https://www.instagram.com/" target="_blank" class="group relative">
                     <img src="https://images.unsplash.com/photo-1696546761318-6600e44882f9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvdGhpbmclMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D" alt="Instagram 8" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
                         <i class="fab fa-instagram text-white text-3xl"></i>
                     </div>
                 </a>
-                <!-- Example post 9 -->
-                <a href="https://www.instagram.com/" target="_blank" class="group relative">
+                <!-- Post 9 -->
+                <a href="https://www.instagram.com/" target="_blank" class="group relative hidden sm:block">
                     <img src="https://plus.unsplash.com/premium_photo-1664299848948-54d352989d94?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdGhpbmclMjByZXBhaXJ8ZW58MHx8MHx8fDA%3D" alt="Instagram 9" class="w-full aspect-square object-cover rounded-lg hover:opacity-90 transition-opacity">
                     <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
                         <i class="fab fa-instagram text-white text-3xl"></i>
@@ -225,7 +219,6 @@
     <!-- Samenwerkingen Section -->
     <section id="samenwerkingen" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-serif text-center mb-16">Samenwerkingen</h2>
             <div class="relative overflow-hidden">
                 <div id="partnersCarousel" class="flex gap-12 space-x-12 px-4 whitespace-nowrap will-change-transform">
                     <!-- Partner Logos -->
@@ -277,8 +270,8 @@
                                 <div class="text-accent">★★★★★</div>
                             </div>
                         </div>
-                        <p class="text-gray-600">"Uitstekende service! Mijn trouwjurk werd perfect op maat gemaakt. Zeer tevreden met het resultaat."</p>
-                        <a class="text-sm text-gray-400 mt-2" href="" target="_blank">Bekijk review</a>
+                        <p class="text-gray-600 mb-3">"Uitstekende service! Mijn trouwjurk werd perfect op maat gemaakt. Zeer tevreden met het resultaat."</p>
+                        <a class="text-sm text-gray-400" href="" target="_blank">Bekijk review</a>
                     </div>
                 </div>
                 <div class="review-item">
@@ -292,8 +285,8 @@
                                 <div class="text-accent">★★★★★</div>
                             </div>
                         </div>
-                        <p class="text-gray-600">"Vakkundig en snel mijn pak vermaakt. Zeer professionele service en prettige communicatie."</p>
-                        <a class="text-sm text-gray-400 mt-2" href="" target="_blank">Bekijk review</a>
+                        <p class="text-gray-600 mb-3">"Vakkundig en snel mijn pak vermaakt. Zeer professionele service en prettige communicatie."</p>
+                        <a class="text-sm text-gray-400" href="" target="_blank">Bekijk review</a>
                     </div>
                 </div>
                 <div class="review-item">
@@ -307,8 +300,8 @@
                                 <div class="text-accent">★★★★★</div>
                             </div>
                         </div>
-                        <p class="text-gray-600">"Fantastische service en oog voor detail. Mijn kleding past nu perfect!"</p>
-                        <a class="text-sm text-gray-400 mt-2" href="" target="_blank">Bekijk review</a>
+                        <p class="text-gray-600 mb-3">"Fantastische service en oog voor detail. Mijn kleding past nu perfect!"</p>
+                        <a class="text-sm text-gray-400" href="" target="_blank">Bekijk review</a>
                     </div>
                 </div>
                 <div class="review-item">
@@ -322,8 +315,8 @@
                                 <div class="text-accent">★★★★★</div>
                             </div>
                         </div>
-                        <p class="text-gray-600">"Zeer tevreden met de reparatie van mijn favoriete jas. Snelle service en uitstekend resultaat."</p>
-                        <a class="text-sm text-gray-400 mt-2" href="" target="_blank">Bekijk review</a>
+                        <p class="text-gray-600 mb-3">"Zeer tevreden met de reparatie van mijn favoriete jas. Snelle service en uitstekend resultaat."</p>
+                        <a class="text-sm text-gray-400" href="" target="_blank">Bekijk review</a>
                     </div>
                 </div>
             </div>
