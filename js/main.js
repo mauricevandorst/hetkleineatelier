@@ -106,3 +106,15 @@ document.addEventListener("DOMContentLoaded", function () {
     
     scrollCarousel();
 });
+
+// Navigation menu
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuLinks = mobileMenu.querySelectorAll("a");
+
+  menuLinks.forEach(link => {
+      link.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+      });
+  });
+});
