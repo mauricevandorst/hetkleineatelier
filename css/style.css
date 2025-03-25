@@ -26,7 +26,11 @@ section.show {
     transform: translateY(0);
 }
 
-/* Hover effects */
+.glass-effect {
+    backdrop-filter: blur(10px) !important; 
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
 .hover-lift {
     transition: transform 0.2s ease;
 }
@@ -35,7 +39,6 @@ section.show {
     transform: translateY(-2px);
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -53,14 +56,12 @@ section.show {
     background: #B4941F;
 }
 
-/* Form focus styles */
 input:focus, textarea:focus {
     outline: none;
     border-color: #D4AF37;
     box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
 }
 
-/* Mobile menu animation */
 #mobile-menu {
     transition: opacity 0.3s ease;
 }
@@ -69,7 +70,6 @@ input:focus, textarea:focus {
     animation: fadeIn 0.3s ease forwards;
 }
 
-/* Hide scrollbar but keep functionality */
 .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -79,7 +79,6 @@ input:focus, textarea:focus {
     display: none;
 }
 
-/* Partners carousel styles */
 .partners-carousel {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;

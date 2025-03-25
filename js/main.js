@@ -31,39 +31,6 @@ $(document).ready(function() {
       }
     ]
   });
-
-  // Initialize partners carousel
-  $('.partners-carousel').slick({
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    prevArrow: $('.partners-carousel').parent().find('.fa-chevron-left').parent(),
-    nextArrow: $('.partners-carousel').parent().find('.fa-chevron-right').parent(),
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
 });
 
 // Add scroll animation
@@ -86,14 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => observer.observe(section));
 });
 
-// Collaborations section
+// Partners / collaborations section
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.getElementById("partnersCarousel");
-    const logos = carousel.innerHTML; // Pak de originele HTML
-    carousel.innerHTML += logos; // Voeg duplicaat toe
+    const logos = carousel.innerHTML; 
+    carousel.innerHTML += logos;
 
     let scrollAmount = 0;
-    const speed = 1.5; // Pas snelheid aan indien nodig
+    const speed = 1;
 
     function scrollCarousel() {
         scrollAmount += speed;
@@ -118,3 +85,19 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+// Verberg navigatie bij scroll naar top
+let prevScrollPos = window.pageYOffset;
+const nav = document.getElementById("nav");
+
+window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+
+    if (currentScrollPos > 50) { 
+        nav.classList.add("glass-effect");
+    } else {
+        nav.classList.remove("glass-effect");
+    }
+
+    prevScrollPos = currentScrollPos;
+};
